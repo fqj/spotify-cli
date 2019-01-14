@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  composer_db:
+    image: ${ZELLS_REPO}/composer-db:${CELLS_TAG_VERSION}
+    labels:
+      - "composer"
+    ports:
+      - ${COMPOSER_REDIS_PORT}:6379
+    volumes:
+      - composerRedis:/data
+    networks:
+      - composer_db_net
+
+volumes:
+  composerRedis:
+
+networks:
+  composer_db_net:
+    name: composer_db_net
+    driver: bridge
+    attachable: true

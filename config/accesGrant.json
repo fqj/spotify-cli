@@ -1,0 +1,11 @@
+{
+    "userId": "11164061990", 
+    "app": { "name": "Third" },
+    "OAuthToken": "BQCihOibgKUIlyxe-_MyFeYFCedRAj7rQl5iIiIVy3GWB7HXJnn5MNvy3Fk9IrbZQ4DKTCJtUCdMzKF7q5Pcp7GWYaNehdXDKYA4JqwFAM_KSv816IlShFje8EEUd3UiJGJ7g7Ps7TAaznPh0JBRioZvXiMuFCyvriaCugGtCbXmAJwftXktZBLlwYUSiUb026RNQDNptXR7HHjDIe23dUDj8_6WJg982R-PWyJlCO_gxS9E3svcMebR2xZM8naM6EkzvHVTvA4hzcS_AU9s",
+                          
+    "clientId": "49b7ad51370f488e9335086698415d77" ,
+    "clientSecret":  "7f2f90271bfb44e1b9d8cdd52913eae1" ,
+    "redirectUri": "https://localhost:8888/callback",
+    "state": "12345"
+}
+

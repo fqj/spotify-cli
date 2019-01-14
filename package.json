@@ -1,0 +1,88 @@
+{
+  "name": "spotify-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/spoti-cli.js",
+  "bin": {
+    "spoty": "./bin/spoti.js"
+  },
+  "keywords": [
+    "npm-library"
+  ],
+  "scripts": {},
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 70,
+    "statements": 60,
+    "functions": 0,
+    "branches": 0,
+    "include": [
+      "lib/utils/core.js",
+      "steps/*"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "all": true
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "array.prototype.flatmap": "^1.2.1",
+    "bacon": "0.0.1",
+    "baconjs": "^2.0.9",
+    "bluebird": "3.5.2",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.2",
+    "command-exists": "^1.2.8",
+    "command-line-args": "^5.0.2",
+    "command-line-commands": "^2.0.1",
+    "command-line-usage": "^5.0.5",
+    "concat-stream": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "copy-dir": "^0.4.0",
+    "cors": "^2.8.5",
+    "dockerode": "2.5.5",
+    "dotenv": "6.0.0",
+    "express": "^4.16.4",
+    "fetch-node": "0.0.1",
+    "find": "0.2.9",
+    "find-up": "2.1.0",
+    "fs-extra": "4.0.2",
+    "globby": "8.0.1",
+    "highland": "^2.13.0",
+    "iconv": "^2.3.2",
+    "inquirer": "6.2.0",
+    "ip": "1.1.5",
+    "js-yaml": "^3.12.0",
+    "moment": "2.22.2",
+    "mz": "2.7.0",
+    "node-fetch": "^2.3.0",
+    "node-sass": "4.9.3",
+    "npm": "6.4.1",
+    "opn": "4.0.2",
+    "os-name": "2.0.1",
+    "path": "0.12.7",
+    "polymer-analyzer": "2.7.0",
+    "portfinder": "1.0.13",
+    "querystring": "^0.2.0",
+    "ramda": "^0.26.0",
+    "request": "^2.88.0",
+    "scandir-sync": "^1.0.6",
+    "single-line-log": "^1.1.2",
+    "split2": "2.2.0",
+    "spotify-web-api-node": "^4.0.0",
+    "targz": "1.0.1",
+    "update-notifier": "2.5.0",
+    "utf-8": "^2.0.0",
+    "winston": "^2.4.3"
+  },
+  "devDependencies": {},
+  "flat": false,
+  "engines": {
+    "node": ">=8.0.0 <=10.3.0",
+    "npm": ">=3.8.6 <=5.5.1"
+  }
+}

@@ -1,0 +1,22 @@
+{ 
+    "Desktop": 
+    { 
+        "id": "eb36d42976bc9cf9e439ce38d2299c7da5fdb0d5",
+        "name": "pc008415",
+        "type": "Computer",
+        "userName": "11164061990"
+    },
+    "web": 
+    { 
+        "id": "14f2db4be57390bb2b84d75c2b2212cd43b2887f",
+        "name": "Web Playback SDK Quick Start Player",
+        "type": "Computer"
+    },
+    "mobil": 
+    { 
+        "id": "d0831a6dd75f8fc4abb6f19e11e71dac66ae30ef",
+        "name": "Samsung Galaxy J3 (2016)",
+        "type": "Smartphone"
+    }
+}
+

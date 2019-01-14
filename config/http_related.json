@@ -1,0 +1,11 @@
+{
+    "HOST" : "https://api.spotify.com/",
+    "URI_ARTISTS" : "v1/artists/",
+    "URI_ALBUMS" : "/albums",
+    "HEADERS_AUTH" : {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer"
+    }
+}
+

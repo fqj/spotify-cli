@@ -1,0 +1,63 @@
+version: '3.5'
+services:
+  composer_api:
+    image: ${ZELLS_REPO}/composer-api:${CELLS_TAG_VERSION}
+    labels:
+      - "composer"
+    environment:
+      - SWAGGER_API_BASE_PATH=http://${COMPOSER_API_HOST}:${COMPOSER_API_PORT}
+      - CELLS_COMPOSER_CUSTOMCATALOG_REDIS_JEDIS_HOST=composer_db
+    ports:
+      - ${COMPOSER_API_PORT}:9000
+    volumes:
+      - composerApi:/consolidation
+      - composerTmp:/tmp/composer
+    networks:
+      - default
+      - composer_db_net
+
+  composer_ui:
+    image: ${ZELLS_REPO}/composer-ui:${CELLS_TAG_VERSION}
+    labels:
+      - "composer"
+    environment:
+      - COMPOSER_UI_SERVICES_HOST=${COMPOSER_API_HOST}
+      - COMPOSER_UI_SERVICES_PORT=${COMPOSER_API_PORT}
+      - COMPOSER_COMMANDS_HOST=${COMPOSER_API_HOST}
+      - COMPOSER_COMMANDS_PORT=${COMPOSER_COMMANDS_HTTP_PORT}
+    ports:
+      - ${COMPOSER_UI_PORT}:80
+    depends_on:
+      - composer_api
+
+  composer_commands:
+    image: ${ZELLS_REPO}/composer-commands:${CELLS_TAG_VERSION}
+    labels:
+      - "composer"
+    environment:
+      # this is the internal port (the right part of port mapping in "composer_api" service
+      - COMPOSER_INTERNAL_API_PORT=9000
+    ports:
+      - ${COMPOSER_COMMANDS_PORT}:9999
+      - ${COMPOSER_COMMANDS_HTTP_PORT}:9998
+    volumes:
+      - composerTmp:/tmp/composer
+    depends_on:
+      - composer_api
+
+## add thing for LivePreview LocalComponents
+
+volumes:
+  composerApi:
+    external:
+      name: ${CELLS_BOX_API}
+  composerRedis:
+    external:
+      name: ${CELLS_BOX_DB}
+  composerTmp:
+
+networks:
+  default:
+    driver: bridge
+  composer_db_net:
+    external: true

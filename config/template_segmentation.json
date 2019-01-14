@@ -1,0 +1,24 @@
+[
+    {
+        "segmentation": "SampleSegmentation",
+        "name": "Basic Segmentation",
+        "desc": "Basic Segmentation Description",
+        "segments": [
+            {
+            "segment": "segmentId-blue",
+            "name": "blue",
+            "desc": "Segment blue description"
+            },
+            {
+            "segment": "segmentId-private",
+            "name": "private",
+            "desc": "Segment private description"
+            },
+            {
+            "segment": "segmentId-regular",
+            "name": "regular",
+            "desc": "Segment regular description"
+            }
+        ]
+    }
+]
